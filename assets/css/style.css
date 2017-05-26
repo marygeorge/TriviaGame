@@ -1,0 +1,79 @@
+html{
+    /*background: url(../images/background.jpg) no-repeat;
+    background-size: cover; */
+    
+}
+body{
+    background-image: url(../images/background.jpg);
+    
+    
+}
+h1{
+    text-align: center;
+    color:#000;
+    text-shadow: 0px 0px 5px #ff3333,0 0 5px #ff3333;
+    font-family: 'Barrio', cursive;
+    font-size: 80px;
+}
+#gamearea, #correctAns, #allDone{
+    position:fixed;
+    top: 25%;
+    left: 5%;
+    height: 60%;
+    width: 90%;
+    /*background-color: white;*/
+    border-style: ridge;
+    border-width: 4px;
+    border-color: #ff3333;
+    text-align: center;
+    text-shadow: 1px 1px 0px #000,-1px 1px 0px #000;
+    font-size: 30px;
+    font-weight: bold;
+    color: #ff3333;
+    
+}
+#timerDiv{
+    text-align: right;
+    font-size: 20px;
+}
+#startArea{
+    position:fixed;
+    top: 25%;
+    left: 5%;
+    height: 50%;
+    width: 90%;
+    text-align: center;
+    
+}
+
+
+#startGame{
+    position: relative;
+    top: 60%;
+    font-size: 30px;
+    font-weight: bold;
+    color: #ff3333;
+    text-shadow: 1px 0px 0px #000,-1px 0px 0px #000;
+    background: transparent;
+}
+#restart{
+    position: fixed;
+    top:67%;
+    left: 45%;
+    font-size: 25px;
+    font-weight: bold;
+    color: #ff3333;
+    text-shadow: 1px 0px 0px #000,-1px 0px 0px #000;
+    background: transparent;
+}
+
+@media only screen and (max-device-height : 736px)  
+{
+    h1{
+    text-align: center;
+    color:#000;
+    text-shadow: 0px 0px 5px #ff3333,0 0 5px #ff3333;
+    font-family: 'Barrio', cursive;
+    font-size: 20px;
+    }
+}
