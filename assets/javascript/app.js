@@ -11,13 +11,13 @@ var questionsArray=[
 ];
 //if time permits use objects instead of arrays???
 
-var questionCtr=0;
-var timeAllotted=15;
-var selectedAnswer="";
-var rightCtr=0;
-var timeCtr=0;
-var inter;
-var timeInter=0;
+var questionCtr=0;//keep track of which question is on play
+var timeAllotted=15;//time allotted to answer each question in seconds
+var selectedAnswer="";//store the andwer user selects
+var rightCtr=0;//keep count of the no:of right answer
+var timeCtr=0;//increments by 1 for every second after the question is displayed
+var inter;//stores the setInterval() value for the game
+var timeInter=0;//stores the setInterval() value for the time
 
 resetAll();
 
@@ -70,7 +70,7 @@ function checkAnswer()
 console.log("answered. questionCtr="+questionCtr +" questionsArray.length-1 ="+(questionsArray.length-1)+" rightCtr="+rightCtr);
 }
 
-
+//displays the question and options
 function nextQuestion()
 {
     $("#correctAns").hide();
@@ -111,14 +111,14 @@ function showTime()
 function gameOn()
 {
     $("#startArea").hide();
-    nextQuestion();
     timeCtr=0;
     clearInterval(timeInter);
     timeInter=setInterval(showTime,1000);
+    nextQuestion();
     inter= setInterval(runTimer,timeAllotted*1000);
 }
 
-// Show the score and set up restart
+// Show the score and set up for restart
 function gameOver()
 {
     clearInterval(timeInter);
@@ -126,7 +126,6 @@ function gameOver()
     var score="<font> Your score: " +rightCtr +"/"+questionsArray.length + "</font>"
     $("#correctAns").hide();
     $("#gamearea").hide();
-    //$("#timerDiv").html(" ");
     $("#allDone").html("Game Over</br></br>"+score);
     $("#allDone").show();
     $("#restart").show();
