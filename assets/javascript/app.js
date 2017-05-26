@@ -104,8 +104,6 @@ function runTimer()
         questionCtr++;
         timeCtr=0;
         clearInterval(timeInter);
-        timeCtr=0;
-        clearInterval(timeInter);
         timeInter=setInterval(showTime,1000);
         nextQuestion();
     }
@@ -129,6 +127,8 @@ function gameOn()
 
 function gameOver()
 {
+    clearInterval(timeInter);
+    clearInterval(inter);
     var score="<font> Your score: " +rightCtr +"/"+questionsArray.length + "</font>"
     $("#correctAns").hide();
     $("#gamearea").hide();
