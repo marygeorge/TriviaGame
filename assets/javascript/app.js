@@ -8,7 +8,7 @@ var questionsArray=[
 //use objects instead of arrays???
 
 var questionCtr=0;
-var timeAllotted=5;
+var timeAllotted=15;
 var selectedAnswer="";
 var rightCtr=0;
 var timeCtr=0;
@@ -114,7 +114,7 @@ function runTimer()
 function showTime()
 {
     timeCtr++;
-    $("#timerDiv").html("Time left: " +(5-timeCtr) );
+    $("#timerDiv").html("Time left: " +(timeAllotted-timeCtr) );
 }
 
 function gameOn()
