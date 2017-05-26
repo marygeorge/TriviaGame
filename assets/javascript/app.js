@@ -18,7 +18,12 @@ var rightCtr=0;//keep count of the no:of right answer
 var timeCtr=0;//increments by 1 for every second after the question is displayed
 var inter;//stores the setInterval() value for the game
 var timeInter=0;//stores the setInterval() value for the time
+var audioElement = document.createElement('audio');
+    //audioElement.setAttribute('src', 'http://www.soundjay.com/misc/sounds/bell-ringing-01.mp3');
+    audioElement.setAttribute('src', '../sounds/wrong-answer.mp3');
 
+    audioElement.play();
+    
 resetAll();
 
 $("#startGame").on("click",gameOn);
@@ -47,11 +52,16 @@ function checkAnswer()
     $("#gamearea").hide();
     if(selectedAnswer === questionsArray[questionCtr][1])
     {
+         var audio = $("#rightSound")[0];
+         audio.play();
+        //$("#rightSound").play();
         rightCtr++;
         $("#correctAns").html("<br>Correct !");
     }
     else
     {
+        var audio = $("#wrongSound")[0];
+        audio.play();
         $("#correctAns").html( "<br>Incorrect<br>"+questionsArray[questionCtr][6]);
     }
     $("#correctAns").show();
@@ -123,6 +133,8 @@ function gameOver()
 {
     clearInterval(timeInter);
     clearInterval(inter);
+    var audio = $("#tadaSound")[0];
+    audio.play();
     var score="<font> Your score: " +rightCtr +"/"+questionsArray.length + "</font>"
     $("#correctAns").hide();
     $("#gamearea").hide();
