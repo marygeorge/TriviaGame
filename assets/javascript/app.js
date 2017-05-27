@@ -5,7 +5,7 @@
 var questionsArray=[
 ["There are 4 birds on a tree. You shoot one bird. How many are left?","0","1","0","2","3","The rest will fly away"],
 ["If there are 12 fish and half of them drown, how many are there?","12","6","half","12","4","Have you ever heard of fishes drowning?"],
-["Before Mount Everest was discovered, what was the highest mountain in the world?","None of the above","None of the above","Kilimanjaro","McKinley","Aconcagua","Himalayas! then...now...forever."],
+["Before Mount Everest was discovered, what was the highest mountain in the world?","None of the above","Kilimanjaro","McKinley","Aconcagua","None of the above","Himalayas! then...now...forever."],
 ["I have three apples. If you take away two from me, how many do you have?","2","all of it","1","3","2","You have 2 apples"],
 ["What color do you get when you mix red, blue and green light","white","grey","black","white","brown","white light...may it guide you."]
 ];
